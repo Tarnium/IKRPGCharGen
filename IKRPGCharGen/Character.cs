@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace IKRPGCharGen
 {
@@ -18,7 +21,7 @@ namespace IKRPGCharGen
         public Archetype arch { get; set; }
         public List<Career> careers { get; set; }
 
-        Character()
+        public Character()
         {
             name = "Unnamed";
             stats = new List<Stat>();
@@ -34,6 +37,15 @@ namespace IKRPGCharGen
         public void SetRace(string race)
         {
             this.race = new Race(race);
+        }
+
+        public void Serialize(string filename)
+        {
+            XmlSerializer xml = new XmlSerializer(this.GetType());
+            TextWriter writer = new StreamWriter(filename);
+            xml.Serialize(writer, this);
+            writer.Close();
+
         }
 
 

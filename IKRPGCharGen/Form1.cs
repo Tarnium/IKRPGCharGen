@@ -26,5 +26,11 @@ namespace IKRPGCharGen
         {
             MessageBox.Show("Verzia:1.0\nAplikáciu vytvoril: Timotej Jurášek \nRok 2016\nAplikácia bola súčasťou ročníkového projektu na FMFI UK");
         }
+
+        private void newCharacterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CharacterCreationDialog ccd = new CharacterCreationDialog();
+            ccd.Show();
+        }
     }
 }

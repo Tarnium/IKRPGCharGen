@@ -51,6 +51,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(838, 32);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.UseWaitCursor = true;
             // 
             // FileButton
             // 
@@ -71,6 +72,7 @@
             this.newCharacterToolStripMenuItem.Name = "newCharacterToolStripMenuItem";
             this.newCharacterToolStripMenuItem.Size = new System.Drawing.Size(215, 30);
             this.newCharacterToolStripMenuItem.Text = "New Character";
+            this.newCharacterToolStripMenuItem.Click += new System.EventHandler(this.newCharacterToolStripMenuItem_Click);
             // 
             // loadCharacterToolStripMenuItem
             // 
@@ -117,7 +119,6 @@
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "IKRPG Char Gen";
-            this.TopMost = true;
             this.UseWaitCursor = true;
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

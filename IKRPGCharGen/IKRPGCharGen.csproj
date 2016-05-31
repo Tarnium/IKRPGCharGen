@@ -51,6 +51,9 @@
     <Compile Include="ArchetypeBenefit.cs" />
     <Compile Include="Career.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="CharacterCreationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +66,9 @@
     <Compile Include="Race.cs" />
     <Compile Include="Spell.cs" />
     <Compile Include="Stat.cs" />
+    <EmbeddedResource Include="CharacterCreationDialog.resx">
+      <DependentUpon>CharacterCreationDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="tumblr_ll2l4h0pP91qff9quo1_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advance2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
